@@ -1,4 +1,5 @@
 import Accordion from './components/Accordion';
+import SearchBar from './components/SearchBar';
 const items = [
     { title: 'T1', body: 'This is T1' },
     { title: 'T2', body: 'This is T2' },
@@ -8,7 +9,8 @@ const items = [
 const App = () => {
     return (  
         <>
-            <div style = {{maxWidth:'60%',margin:'40px auto'}}>
+            <div style={{ maxWidth: '60%', margin: '40px auto' }}>
+                <SearchBar/>
                 <Accordion items={items} />
             </div>
         </>

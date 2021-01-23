@@ -13,7 +13,7 @@ const Accordion = (props) => {
                         <div class="title">
                             <i class="dropdown icon"><h2 onClick={()=>onTitleClick(index)}>{ item.title }</h2></i>
                         </div>
-                        <div>
+                        <div className="active">
                             {item.body} 
                         </div>
                     </div>
