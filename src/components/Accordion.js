@@ -4,16 +4,17 @@ const Accordion = (props) => {
     const onTitleClick = (index) => {
         console.log('Clicked title number', index);
         setActiveIndex(index);
-    }
+    }       
     return ( 
         <>
             {props.items.map((item,index) => {
                 return (
-                    <div key={item.title} class="ui styled accordion" style={{margin:'40px'}}>
-                        <div class="title">
-                            <i class="dropdown icon"><h2 onClick={()=>onTitleClick(index)}>{ item.title }</h2></i>
-                        </div>
-                        <div className="active">
+                    <div key={item.id} className="ui styled accordion" style={{margin:'40px'}}>
+                        <div onClick={()=>onTitleClick(index)} class="title">
+                            <i className="dropdown icon"></i>
+                            <h2>{ item.title }</h2>
+                        </div>                        
+                        <div className={activeIndex===index?'active':'content'}>
                             {item.body} 
                         </div>
                     </div>
